@@ -1,0 +1,16 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "landing page",
+  "main": "index.js",
+  "scripts": {
+
+  },
+  "repository": "https://github.com/JohnPevien/udemy-advancecss-and-sass.git",
+  "author": "John Pevien Laguindam <johnpevienwork@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "node-sass": "^7.0.3"
+  }
+}
