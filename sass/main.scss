@@ -3,6 +3,7 @@ $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 $color-grey-dark: #777;
 $color-white: #fff;
+$color-black: #000;
 
 * {
   /* reset margins and padding */
@@ -28,25 +29,37 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right,
-      rgba($color-primary-light, 0.8), /*only works in sass*/
-      rgba($color-primary-dark, 0.8)), /*only works in sass*/
-    url("../img/hero.jpg");
+  background-image: linear-gradient(
+      to right,
+      rgba($color-primary-light, 0.8),
+      /*only works in sass*/ rgba($color-primary-dark, 0.8)
+    ),
+    /*only works in sass*/ url("../img/hero.jpg");
   background-size: cover;
   background-position: bottom;
 
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   position: relative;
-}
 
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
 
-.header__logo {
-  height: 3.5rem;
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__textbox {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+
+    /* use transform to exactly move the absolute element in the center of its parent */
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 }
 
 .heading-primary {
@@ -55,33 +68,23 @@ body {
   text-align: center;
   margin-bottom: 6rem;
   backface-visibility: hidden;
-}
 
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 700;
-  letter-spacing: 3.5rem;
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 700;
+    letter-spacing: 3.5rem;
 
-  animation: moveInLeft 1s ease-in-out;
-}
+    animation: moveInLeft 1s ease-in-out;
+  }
 
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: 1.7rem;
-  animation: moveInRight 1s ease-in-out;
-}
-
-.header__textbox {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-
-  /* use transform to exactly move the absolute element in the center of its parent */
-  transform: translate(-50%, -50%);
-  text-align: center;
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.7rem;
+    animation: moveInRight 1s ease-in-out;
+  }
 }
 
 /* animation for moving from left */
@@ -131,57 +134,59 @@ body {
 }
 
 /* pseudo class to select :link (anchor element) */
-.btn:link,
-.btn:visited {
-  display: inline-block;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1rem 3rem;
-  border-radius: 10rem;
-  transition: all 0.2s;
-  position: relative;
-  padding: 0.5em 1.5em;
-  position: relative;
-}
 
-.btn--white {
-  background-color: $color-white;
-  color: $color-grey-dark;
-}
+.btn {
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    padding: 0.5em 1.5em;
+    position: relative;
+  }
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
 
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
+    &::after {
+      background-color: $color-white;
+    }
+  }
 
-.btn::after {
-  content: "";
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 400ms;
-}
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
 
-.btn--white::after {
-  background-color: $color-white;
-}
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
 
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 400ms;
+  }
 
-.btn--animated {
-  animation: moveInBottom 500ms ease-in-out 0.75s;
-  animation-fill-mode: backwards;
+  &--animated {
+    animation: moveInBottom 500ms ease-in-out 0.75s;
+    animation-fill-mode: backwards;
+  }
 }
