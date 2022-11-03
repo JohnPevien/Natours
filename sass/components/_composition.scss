@@ -1,0 +1,38 @@
+.composition {
+  position: relative;
+  &__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    position: absolute;
+    transition: all 0.2s;
+    outline-offset: 1rem;
+
+    &--p1 {
+      top: 6rem;
+      left: 0rem;
+    }
+
+    &--p2 {
+      top: 12rem;
+      right: 0rem;
+    }
+
+    &--p3 {
+      top: 18rem;
+      left: 10rem;
+    }
+
+    &:hover {
+      outline: 1rem solid $color-primary;
+      transform: scale(1.05) translateY(-1rem);
+      box-shadow: 0 2rem 6rem rgba($color-black, 0.4);
+      z-index: 3;
+    }
+  }
+
+  //when composition div is hovered, check for unhonvered images (&__photo:not(:hover)) and apply the following styles
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.9);
+    z-index: 1;
+  }
+}
