@@ -12,20 +12,46 @@
     width: 15rem;
     height: 15rem;
     float: left;
-    background-color: pink;
 
     // shape outside only works with width, height and float declared
     -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-2rem) skewX(12deg);
+    position: relative;
   }
 
   &__image {
     height: 100%;
+    transform: translateX(-3rem) scale(1.4);
+    backface-visibility: hidden;
+    transition: all 0.3s;
   }
 
   &__text {
     transform: skewX(12deg);
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    text-align: center;
+    color: $color-white;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__image {
+    transform: translateX(-3rem) scale(1);
+    filter: blur(0.5px) brightness(80%);
   }
 }
