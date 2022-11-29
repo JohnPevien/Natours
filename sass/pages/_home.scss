@@ -52,4 +52,9 @@
     url("../img/nat-10.jpg");
   background-size: cover;
   height: 50rem;
+
+  &__form {
+    width: 50%;
+    padding: 6rem;
+  }
 }
