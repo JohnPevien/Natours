@@ -4,14 +4,14 @@
   "description": "landing page",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "watch-sass": "sass --watch sass/main.scss css/style.css",
+    "compile-sass":"sass sass/main.scss css/style.css"
   },
   "repository": "https://github.com/JohnPevien/Natours.git",
   "author": "John Pevien Laguindam <johnpevienwork@gmail.com>",
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "node-sass": "^7.0.3"
   },
   "dependencies": {}
 }
