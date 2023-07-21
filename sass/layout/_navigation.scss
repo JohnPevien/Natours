@@ -124,6 +124,7 @@
       content: "";
       position: absolute;
       left: 0;
+      transition: all 0.2s ease-in-out;
     }
 
     &::before {
@@ -133,5 +134,13 @@
     &::after {
       top: 0.8rem;
     }
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
   }
 }
