@@ -23,7 +23,7 @@ body {
 
     animation: moveInLeft 1s ease-in-out;
 
-    @include respond(phone) {
+    @include respond(tablet-portait) {
       letter-spacing: 1rem;
       font-family: 5rem;
     }
@@ -36,7 +36,7 @@ body {
     letter-spacing: 1.7rem;
     animation: moveInRight 1s ease-in-out;
 
-    @include respond(phone) {
+    @include respond(tablet-portrait) {
       letter-spacing: 0.5rem;
     }
   }
