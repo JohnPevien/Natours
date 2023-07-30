@@ -12,6 +12,7 @@
 
   @include respond(tablet-portrait) {
     max-width: 50rem;
+    padding: 0 3rem;
   }
 
   // select all classes that starts with "col-"

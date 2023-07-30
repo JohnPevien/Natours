@@ -57,7 +57,7 @@ body {
   color: transparent;
   transition: all 0.2s;
 
-  @include respond(tab-port) {
+  @include respond(tablet-portrait) {
     font-size: 3rem;
   }
 
