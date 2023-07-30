@@ -1,14 +1,14 @@
 .row {
   max-width: $grid-width;
   margin: 0 auto;
+
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
 
-    @include respond(tablet-portait) {
+    @include respond(tablet-portrait) {
       margin-bottom: $gutter-vertical-small;
     }
   }
-  @include clearfix;
 
   @include respond(tablet-portrait) {
     max-width: 50rem;
@@ -16,8 +16,11 @@
   }
 
   // select all classes that starts with "col-"
+  @include clearfix;
+
   [class^="col-"] {
     float: left;
+
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
 
@@ -29,8 +32,6 @@
 
     @include respond(tablet-portrait) {
       width: 100% !important;
-      margin-right: 0;
-      margin-bottom: $gutter-vertical;
     }
   }
 

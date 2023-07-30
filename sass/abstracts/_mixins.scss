@@ -22,7 +22,7 @@
     }
   }
 
-  @if $breakpoint == tablet-portait {
+  @if $breakpoint == tablet-portrait {
     @media (max-width: 56.25em) {
       @content;
     }
