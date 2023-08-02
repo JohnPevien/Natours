@@ -15,7 +15,6 @@
     padding: 0 3rem;
   }
 
-  // select all classes that starts with "col-"
   @include clearfix;
 
   [class^="col-"] {
