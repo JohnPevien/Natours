@@ -16,7 +16,7 @@
     text-align: center;
     cursor: pointer;
 
-    @include respond(tab-port) {
+    @include respond(tablet-portrait) {
       top: 4rem;
       right: 4rem;
     }
@@ -111,7 +111,6 @@
     }
   }
 
-  //FUNCTIONALITY
   &__checkbox:checked ~ &__background {
     transform: scale(80);
   }
@@ -121,7 +120,6 @@
     width: 100%;
   }
 
-  //ICON
   &__icon {
     position: relative;
     margin-top: 3.5rem;
