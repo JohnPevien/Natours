@@ -2,6 +2,10 @@
   background-color: $color-grey-light-1;
   padding: 25rem 0;
   margin-top: -20vh;
+
+  @include respond(tablet-porait) {
+    padding: 20rem 0;
+  }
 }
 
 .section-features {
@@ -20,17 +24,29 @@
   & > * {
     transform: skewY(7deg);
   }
+
+  @include respond(tablet-porait) {
+    padding: 15rem 0;
+  }
 }
 
 .section-tours {
-  padding: 30rem 0 5rem 0;
+  padding: 30rem 0 15rem 0;
   background-color: $color-grey-light-1;
   margin-top: -15rem;
+
+  @include respond(tablet-porait) {
+    padding: 25rem 0 10rem 0;
+  }
 }
 
 .section-stories {
   position: relative;
   padding: 15rem 0;
+
+  @include respond(tablet-porait) {
+    padding: 10rem 0;
+  }
 }
 
 .section-book {
@@ -40,6 +56,10 @@
     $color-primary-light,
     $color-primary-dark
   );
+
+  @include respond(tablet-porait) {
+    padding: 10rem 0;
+  }
 }
 
 .book {
