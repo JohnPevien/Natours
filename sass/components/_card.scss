@@ -4,6 +4,7 @@
   height: 54rem;
 
   &__side {
+    height: 54rem;
     transition: all 0.3s ease;
     position: absolute;
     top: 0;
@@ -188,5 +189,54 @@
   &__price-value {
     font-size: 6rem;
     font-weight: 300;
+  }
+
+  @include respond(tablet-portrait) {
+    height: auto;
+
+    &__side {
+      height: auto;
+      position: relative;
+      border-radius: 3px;
+
+      &--back {
+        transform: rotateY(0);
+      }
+    }
+
+    &:hover &__side {
+      &--front {
+        transform: rotateY(0);
+      }
+
+      &--back {
+        transform: rotateY(0);
+      }
+    }
+
+    &__cta {
+      position: relative;
+      top: 0%;
+      left: 0%;
+      transform: translate(0);
+      width: 100%;
+      text-align: center;
+    }
+
+    &__price-box {
+      text-align: center;
+      color: $color-white;
+      margin-bottom: 5rem;
+    }
+
+    &__price-only {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+
+    &__price-value {
+      font-size: 6rem;
+      font-weight: 300;
+    }
   }
 }
