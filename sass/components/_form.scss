@@ -8,12 +8,18 @@
     padding: 1.5rem 2rem;
     font-family: inherit;
     color: inherit;
-    width: 100%;
+    width: 90%;
     border-radius: 2px;
     background-color: rgba($color-white, 0.5);
     border: none;
     border-bottom: 3px solid transparent;
     display: block;
+
+    transition: all 0.3s;
+
+    @include respond(tablet-portrait) {
+      width: 100%;
+    }
 
     &::-webkit-input-placeholder {
       color: $color-grey-dark-2;
@@ -50,6 +56,10 @@
   &__radio-group {
     width: 48%;
     display: inline-block;
+    @include respond(tablet-portrait) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
   }
 
   &__radio-input {
