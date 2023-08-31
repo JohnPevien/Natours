@@ -51,8 +51,11 @@
   &__image {
     height: 100%;
     transform: translateX(-3rem) scale(1.4);
-    backface-visibility: hidden;
     transition: all 0.3s;
+
+    @supports (backface-visibility: hidden) {
+      backface-visibility: hidden;
+    }
   }
 
   &__text {
@@ -73,7 +76,10 @@
     text-transform: uppercase;
     opacity: 0;
     transition: all 0.3s;
-    backface-visibility: hidden;
+
+    @supports (backface-visibility: hidden) {
+      backface-visibility: hidden;
+    }
   }
 
   &:hover &__caption {
