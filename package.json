@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "watch-sass": "sass --watch sass/main.scss css/style.css",
-    "compile-sass":"sass sass/main.scss css/style.css"
+    "compile-sass": "sass sass/main.scss css/style.css"
   },
   "repository": "https://github.com/JohnPevien/Natours.git",
   "author": "John Pevien Laguindam <johnpevienwork@gmail.com>",
   "license": "MIT",
   "private": true,
-  "devDependencies": {
-  },
-  "dependencies": {}
+  "dependencies": {
+    "concat": "^1.0.3"
+  }
 }

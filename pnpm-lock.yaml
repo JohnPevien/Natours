@@ -1,0 +1,21 @@
+lockfileVersion: 5.4
+
+specifiers:
+  concat: ^1.0.3
+
+dependencies:
+  concat: 1.0.3
+
+packages:
+
+  /commander/2.20.3:
+    resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
+    dev: false
+
+  /concat/1.0.3:
+    resolution: {integrity: sha512-f/ZaH1aLe64qHgTILdldbvyfGiGF4uzeo9IuXUloIOLQzFmIPloy9QbZadNsuVv0j5qbKQvQb/H/UYf2UsKTpw==}
+    engines: {node: '>=6'}
+    hasBin: true
+    dependencies:
+      commander: 2.20.3
+    dev: false
