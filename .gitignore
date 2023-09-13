@@ -1,0 +1,7 @@
+# Ignore node_modules from all subdirectories
+**/*/node_modules/
+
+# Other common gitignore rules
+.DS_Store
+npm-debug.log
+.env
