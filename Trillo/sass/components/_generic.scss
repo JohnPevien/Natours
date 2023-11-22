@@ -179,3 +179,15 @@
   text-align: center;
   padding: 2.5rem;
 }
+
+// Gallery
+.gallery {
+  display: flex;
+
+  &__photo {
+    width: 100%;
+    display: block;
+    transition: all 0.2s;
+    backface-visibility: hidden;
+  }
+}
