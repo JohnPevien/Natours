@@ -34,3 +34,6 @@
   background-color: #fff;
   flex: 1;
 }
+.paragraph:not(:last-of-type) {
+  margin-bottom: 3rem;
+}
