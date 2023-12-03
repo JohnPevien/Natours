@@ -95,3 +95,65 @@
     }
   }
 }
+
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  position: relative;
+  overflow: hidden;
+
+  padding: 3rem;
+  margin-bottom: 3rem;
+
+  &__text {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 10;
+  }
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__photo {
+    height: 4.3rem;
+    width: 4.3rem;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+  }
+
+  &__user-box {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+  }
+
+  &__user-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  &__user-date {
+    font-size: 1rem;
+    color: var(--color-grey-dark-3);
+  }
+
+  &__rating {
+    font-size: 2rem;
+    color: var(--color-primary);
+    font-weight: 300;
+  }
+
+  &::before {
+    content: "\201c";
+    line-height: 1;
+    font-size: 15rem;
+    font-family: sans-serif;
+    position: absolute;
+    color: #b3b3b342;
+    top: -1rem;
+    left: 0;
+  }
+}
