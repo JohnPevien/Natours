@@ -263,8 +263,17 @@
   cursor: pointer;
   transition: all 0.2 ease-in-out;
 
+  span {
+    margin-left: 0.3rem;
+    transition: margin-left 0.2s ease-in-out;
+  }
+
   &:hover {
     color: var(--color-grey-dark-1);
+
+    span {
+      margin-left: 0.8rem;
+    }
   }
 
   &:focus {
@@ -292,6 +301,9 @@
 
 .user-reviews {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @keyframes pulsate {
