@@ -15,6 +15,10 @@ html {
   /* 1rem = 10px */
 
   box-sizing: border-box;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 50%;
+  }
 }
 
 body {
